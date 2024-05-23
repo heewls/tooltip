@@ -2,7 +2,7 @@ import * as S from "./Tooltip.styles";
 
 import React, { useState } from "react";
 
-type TooltipPosition =
+export type TooltipDirection =
     | "left"
     | "right"
     | "bottom"
@@ -17,7 +17,7 @@ type TooltipPosition =
     | "rightBottom";
 
 interface TooltipProps {
-    direction?: TooltipPosition;
+    direction?: TooltipDirection;
     enterDelay?: number;
     leaveDelay?: number;
     content: React.ReactNode;
@@ -58,32 +58,14 @@ export default function Tooltip({
         <>
             <S.Content onMouseEnter={showTooltip} onMouseLeave={hideTooltip}>
                 {children}
-                <S.Message style={style} className={`${direction} ${visible ? "visible" : ""} ${hover ? "hover" : ""}`}>
+                <S.Message
+                    style={style}
+                    direction={direction}
+                    className={`${visible ? "visible" : ""} ${hover ? "hover" : ""}`}
+                >
                     {content}
                 </S.Message>
             </S.Content>
         </>
     );
 }
-
-/* 
-    &.arrow {
-        color: black;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 5px;
-        position: absolute;
-    } */
-
-/* &.bottom::after {
-        content: "";
-        position: absolute;
-        background-color: black;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: black transparent transparent transparent;
-    } */
