@@ -1,5 +1,4 @@
 import * as S from "./Tooltip.styles";
-
 import React, { useState } from "react";
 
 export type TooltipDirection =
@@ -23,6 +22,7 @@ interface TooltipProps {
     content: React.ReactNode;
     children: React.ReactNode;
     style?: React.CSSProperties;
+    backgroundColor?: string;
     disabled?: boolean;
     hover?: boolean;
 }
@@ -34,6 +34,7 @@ export default function Tooltip({
     content,
     children,
     style,
+    backgroundColor,
     disabled = false,
     hover = false,
 }: TooltipProps) {
@@ -61,6 +62,7 @@ export default function Tooltip({
                 <S.Message
                     style={style}
                     direction={direction}
+                    backgroundColor={backgroundColor}
                     className={`${visible ? "visible" : ""} ${hover ? "hover" : ""}`}
                 >
                     {content}
