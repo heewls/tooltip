@@ -1,3 +1,4 @@
+import CustomTooltip from "./components/Example/CustomTooltip/CustomTooltip";
 import Normal from "./components/Example/Normal/Normal";
 import Options from "./components/Example/Options/Options";
 import VariousContent from "./components/Example/VariousContent/VariousContent";
@@ -8,6 +9,7 @@ function App() {
             <Normal />
             <Options />
             <VariousContent />
+            <CustomTooltip />
         </div>
     );
 }
