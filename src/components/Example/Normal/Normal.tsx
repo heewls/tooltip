@@ -47,8 +47,8 @@ export default function Normal() {
                 <Tooltip direction="right" content={<Prompt />}>
                     <S.Content className="rightBottom">Right</S.Content>
                 </Tooltip>
-                <Tooltip direction="rightTop" content={<Prompt />}>
-                    <S.Content className="content">RT</S.Content>
+                <Tooltip direction="rightBottom" content={<Prompt />}>
+                    <S.Content className="content">RB</S.Content>
                 </Tooltip>
             </S.RightContainer>
         </S.Container>
