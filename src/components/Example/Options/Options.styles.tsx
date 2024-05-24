@@ -5,6 +5,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 `;
 export const Content = styled.div`
     background-color: #50a88c;
@@ -16,7 +17,6 @@ export const Content = styled.div`
     border: none;
     font-size: 15px;
     padding: 2px 0;
-    margin-bottom: 10px;
     cursor: pointer;
     transition: 800ms ease all;
 `;

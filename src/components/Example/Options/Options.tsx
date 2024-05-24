@@ -11,7 +11,7 @@ export default function Options() {
             <Tooltip direction="top" content={<Prompt />} leaveDelay={1}>
                 <S.Content>leave-delay 1s</S.Content>
             </Tooltip>
-            <Tooltip direction="topRight" content={<Prompt />} hover>
+            <Tooltip direction="topRight" content={<Prompt />} hover enterDelay={0.3} leaveDelay={0.3}>
                 <S.Content>hover not hidden</S.Content>
             </Tooltip>
         </S.Container>
