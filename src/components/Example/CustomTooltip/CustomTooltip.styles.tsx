@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    padding: 100px 0;
 `;
 
 export const PinkContent = styled.div`
