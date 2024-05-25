@@ -6,11 +6,11 @@ type Props = {
     backgroundColor: string | undefined;
 };
 
-export const Message = styled.div<Props>`
+export const Tooltip = styled.div<Props>`
     background-color: ${(props) => props.backgroundColor || "black"};
-    padding: 2px 8px;
+    padding: 4px 8px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
     width: max-content;
     min-height: 25px;
@@ -19,90 +19,9 @@ export const Message = styled.div<Props>`
     color: white;
     visibility: hidden;
     z-index: 999;
-    position: absolute;
+    position: relative;
 
-    ${(props) => {
-        switch (props.direction) {
-            case "left":
-                return css`
-                    transform: translate(0, -50%);
-                    top: 50%;
-                    right: 100%;
-                    margin-right: 6px;
-                `;
-            case "leftTop":
-                return css`
-                    top: 0;
-                    right: 100%;
-                    margin-right: 6px;
-                `;
-            case "leftBottom":
-                return css`
-                    bottom: 0;
-                    right: 100%;
-                    margin-right: 6px;
-                `;
-            case "right":
-                return css`
-                    transform: translate(0, -50%);
-                    top: 50%;
-                    left: 100%;
-                    margin-left: 6px;
-                `;
-            case "rightTop":
-                return css`
-                    top: 0;
-                    left: 100%;
-                    margin-left: 6px;
-                `;
-            case "rightBottom":
-                return css`
-                    bottom: 0;
-                    left: 100%;
-                    margin-left: 6px;
-                `;
-            case "bottom":
-                return css`
-                    top: 100%;
-                    left: 50%;
-                    transform: translate(-50%, 0);
-                    margin-top: 6px;
-                `;
-            case "bottomLeft":
-                return css`
-                    top: 100%;
-                    left: 0;
-                    margin-top: 6px;
-                `;
-            case "bottomRight":
-                return css`
-                    top: 100%;
-                    right: 0;
-                    margin-top: 6px;
-                `;
-            case "top":
-                return css`
-                    bottom: 100%;
-                    left: 50%;
-                    transform: translate(-50%, 0);
-                    margin-bottom: 6px;
-                `;
-            case "topLeft":
-                return css`
-                    bottom: 100%;
-                    left: 0;
-                    margin-bottom: 6px;
-                `;
-            case "topRight":
-                return css`
-                    bottom: 100%;
-                    right: 0;
-                    margin-bottom: 6px;
-                `;
-        }
-    }};
-
-    &::after {
+    :after {
         content: "";
         position: absolute;
         border-style: solid;
@@ -200,5 +119,4 @@ export const Message = styled.div<Props>`
 
 export const Content = styled.div`
     display: inline-block;
-    position: relative;
 `;
