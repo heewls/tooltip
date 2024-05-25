@@ -143,7 +143,7 @@ export default function Tooltip({
                 backgroundColor={backgroundColor}
                 className={`${visible ? "visible" : ""} ${hover ? "hover" : ""}`}
             >
-                {content}
+                {typeof content === "string" ? <div>{content}</div> : content}
             </S.Tooltip>
         </S.Content>
     );

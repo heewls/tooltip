@@ -19,13 +19,13 @@ export const Tooltip = styled.div<Props>`
     color: white;
     visibility: hidden;
     z-index: 999;
-    position: relative;
 
-    :after {
+    ::after {
         content: "";
         position: absolute;
         border-style: solid;
         border-width: 5px;
+
         ${(props) => {
             switch (props.direction) {
                 case "left":
@@ -105,7 +105,7 @@ export const Tooltip = styled.div<Props>`
                         border-color: ${props.backgroundColor || "black"} transparent transparent transparent;
                     `;
             }
-        }}
+        }};
     }
 
     &.visible {
