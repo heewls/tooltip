@@ -12,7 +12,7 @@ export const ExampleContainer = styled.div`
 
 export const Container = styled.div`
     display: flex;
-    gap: 30;
+    gap: 30px;
 `;
 
 export const ScrollContainer = styled.div`
