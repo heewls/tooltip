@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LtoR, RtoL } from "../../keyframe";
 
 export const Container = styled.div`
     display: flex;
@@ -20,4 +21,29 @@ export const Content = styled.div`
     padding: 2px 0;
     cursor: pointer;
     transition: 800ms ease all;
+    position: relative;
+
+    &:hover {
+        background-color: white;
+        color: #50a88c;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #50a88c;
+    }
+    &:hover::before {
+        top: 0;
+        animation: ${RtoL} 0.8s;
+    }
+
+    &:hover::after {
+        bottom: 0;
+        animation: ${LtoR} 0.8s;
+    }
 `;
