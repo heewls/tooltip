@@ -26,7 +26,7 @@ export const YellowContent = styled.div`
     background-color: #fdf1b2;
     width: 70px;
     text-align: center;
-    color: white;
+    color: black;
     font-weight: bolder;
     border-radius: 4px;
     border: none;

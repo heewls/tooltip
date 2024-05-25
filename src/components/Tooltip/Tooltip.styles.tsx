@@ -19,6 +19,7 @@ export const Tooltip = styled.div<Props>`
     color: white;
     visibility: hidden;
     z-index: 999;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     ::after {
         content: "";
