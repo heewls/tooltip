@@ -8,6 +8,7 @@ export const Container = styled.div`
 
 export const TopContainer = styled.div`
     margin-bottom: 80px;
+    white-space: nowrap;
 `;
 export const RightContainer = styled.div`
     display: flex;
