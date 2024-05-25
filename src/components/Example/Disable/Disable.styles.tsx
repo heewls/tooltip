@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LtoR, RtoL } from "../../keyframe";
+import { LtoR, LtoRReverse, RtoL, RtoLReverse } from "../../keyframe";
 
 type Props = {
     disable: boolean;
@@ -43,10 +43,29 @@ export const Button = styled.button<Props>`
         top: 0;
         animation: ${RtoL} 0.8s;
     }
-
     &:hover::after {
         bottom: 0;
         animation: ${LtoR} 0.8s;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: ${(props) => (props.disable ? "grey" : "black")};
+    }
+
+    &::before {
+        top: 0;
+        animation: ${RtoLReverse} 0.8s forwards;
+    }
+
+    &::after {
+        bottom: 0;
+        animation: ${LtoRReverse} 0.8s forwards;
     }
 `;
 

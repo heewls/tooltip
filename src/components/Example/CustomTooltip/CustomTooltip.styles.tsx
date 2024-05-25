@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LtoR, RtoL } from "../../keyframe";
+import { LtoR, LtoRReverse, RtoL, RtoLReverse } from "../../keyframe";
 
 export const Container = styled.div`
     display: flex;
@@ -41,10 +41,29 @@ export const PinkContent = styled.div`
         top: 0;
         animation: ${RtoL} 0.8s;
     }
-
     &:hover::after {
         bottom: 0;
         animation: ${LtoR} 0.8s;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #f3aecb;
+    }
+
+    &::before {
+        top: 0;
+        animation: ${RtoLReverse} 0.8s forwards;
+    }
+
+    &::after {
+        bottom: 0;
+        animation: ${LtoRReverse} 0.8s forwards;
     }
 `;
 
@@ -81,9 +100,28 @@ export const YellowContent = styled.div`
         top: 0;
         animation: ${RtoL} 0.8s;
     }
-
     &:hover::after {
         bottom: 0;
         animation: ${LtoR} 0.8s;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #fdf1b2;
+    }
+
+    &::before {
+        top: 0;
+        animation: ${RtoLReverse} 0.8s forwards;
+    }
+
+    &::after {
+        bottom: 0;
+        animation: ${LtoRReverse} 0.8s forwards;
     }
 `;
