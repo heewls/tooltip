@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as S from "./Disable.styels";
+import * as S from "./Disable.styles";
 import Tooltip from "../../Tooltip/Tooltip";
 
 export default function Disable() {
