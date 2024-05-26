@@ -6,7 +6,7 @@ export default function Normal() {
     return (
         <S.Container>
             <S.LeftContainer>
-                <Tooltip direction="leftTop" content={<Prompt />} backgroundColor="red">
+                <Tooltip direction="leftTop" content={<Prompt />}>
                     <S.Content>LT</S.Content>
                 </Tooltip>
                 <Tooltip direction="left" content={<Prompt />}>
