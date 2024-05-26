@@ -5,6 +5,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    /* position: relative; */
 `;
 
 export const Content = styled.div`

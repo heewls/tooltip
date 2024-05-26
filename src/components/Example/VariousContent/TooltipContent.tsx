@@ -1,7 +1,11 @@
 import * as S from "./TooltipContent.styles";
 import Icon from "../../../assets/svg/i.svg";
 
-export default function TooltipContent() {
+type TooltipContentProps = {
+    openToast: () => void;
+};
+
+export default function TooltipContent({ openToast }: TooltipContentProps) {
     return (
         <S.Container>
             <S.MessageContainer>
@@ -9,7 +13,7 @@ export default function TooltipContent() {
                 <S.Message>Are you sure to delete this task?</S.Message>
             </S.MessageContainer>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                <S.YesButton>Yes</S.YesButton>
+                <S.YesButton onClick={openToast}>Yes</S.YesButton>
             </div>
         </S.Container>
     );
